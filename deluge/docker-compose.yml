@@ -81,3 +81,35 @@ services:
       - 6105:6881
       - 6105:6881/udp
     restart: unless-stopped
+  deluge06:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge06
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge06:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8106:8112
+      - 6106:6881
+      - 6106:6881/udp
+    restart: unless-stopped
+  deluge07:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge07
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge07:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8107:8112
+      - 6107:6881
+      - 6107:6881/udp
+    restart: unless-stopped
