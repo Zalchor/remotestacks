@@ -1,0 +1,83 @@
+---
+version: "2.1"
+services:
+  deluge01:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge01
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge01:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8101:8112
+      - 6101:6881
+      - 6101:6881/udp
+    restart: unless-stopped
+  deluge02:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge02
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge02:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8102:8112
+      - 6102:6881
+      - 6102:6881/udp
+    restart: unless-stopped
+  deluge03:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge03
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge03:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8103:8112
+      - 6103:6881
+      - 6103:6881/udp
+    restart: unless-stopped
+  deluge04:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge04
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge04:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8104:8112
+      - 6104:6881
+      - 6104:6881/udp
+    restart: unless-stopped
+  deluge05:
+    image: lscr.io/linuxserver/deluge
+    container_name: deluge05
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /disk2/deluge/config/deluge05:/config
+      - /disk2/torrents:/torrents
+    ports:
+      - 8105:8112
+      - 6105:6881
+      - 6105:6881/udp
+    restart: unless-stopped
