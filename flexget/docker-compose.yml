@@ -5,7 +5,7 @@ services:
     container_name: flexget01
     restart: on-failure:5
     ports :
-      - 5050:5050
+      - 5051:5050
     volumes:
       - /disk2/flexget/data:/data
       - /disk2/flexget/config:/config
