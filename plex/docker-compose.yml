@@ -1,0 +1,17 @@
+version: "2.1"
+services:
+  plex01:
+    image: lscr.io/linuxserver/plex
+    container_name: plex01
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+    volumes:
+      - /disk3/plex/config:/config
+      - /disk1/plex/transcoder:/transcoder
+      - /disk3/plex/tv:/tv
+      - /disk3/plex/tvarchive:/tvarchive
+      - /disk3/plex/movies:/movies
+    restart: unless-stopped
