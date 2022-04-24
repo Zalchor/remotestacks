@@ -9,7 +9,7 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/medusa01:/config
-      - /disk3/torrents:/torrents
+      - /disk2/torrents:/torrents
       - /disk3/plex/tv:/tv
     ports:
       - 8081:8081
