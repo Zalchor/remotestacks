@@ -14,8 +14,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8101:8112
-      - 6101:6881
-      - 6101:6881/udp
+      - 6101:60881
+      - 6101:60881/udp
     restart: unless-stopped
   deluge02:
     image: lscr.io/linuxserver/deluge
