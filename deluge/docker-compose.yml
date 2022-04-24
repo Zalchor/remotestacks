@@ -14,8 +14,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8101:8112
-      - 6101:60881
-      - 6101:60881/udp
+      - 60881:60881
+      - 60881:60881/udp
     restart: unless-stopped
   deluge02:
     image: lscr.io/linuxserver/deluge
@@ -30,8 +30,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8102:8112
-      - 6102:60881
-      - 6102:60881/udp
+      - 60882:60882
+      - 60882:60882/udp
     restart: unless-stopped
   deluge03:
     image: lscr.io/linuxserver/deluge
@@ -46,8 +46,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8103:8112
-      - 6103:60881
-      - 6103:60881/udp
+      - 60883:60883
+      - 60883:60883/udp
     restart: unless-stopped
   deluge04:
     image: lscr.io/linuxserver/deluge
@@ -62,8 +62,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8104:8112
-      - 6104:60881
-      - 6104:60881/udp
+      - 60884:60884
+      - 60884:60884/udp
     restart: unless-stopped
   deluge05:
     image: lscr.io/linuxserver/deluge
@@ -78,8 +78,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8105:8112
-      - 6105:60881
-      - 6105:60881/udp
+      - 60885:60885
+      - 60885:60885/udp
     restart: unless-stopped
   deluge06:
     image: lscr.io/linuxserver/deluge
@@ -94,8 +94,8 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8106:8112
-      - 6106:60881
-      - 6106:60881/udp
+      - 60886:60886
+      - 60886:60886/udp
     restart: unless-stopped
   deluge07:
     image: lscr.io/linuxserver/deluge
@@ -110,6 +110,6 @@ services:
       - /disk2/torrents:/torrents
     ports:
       - 8107:8112
-      - 6107:60881
-      - 6107:60881/udp
+      - 60887:60887
+      - 60887:60887/udp
     restart: unless-stopped
