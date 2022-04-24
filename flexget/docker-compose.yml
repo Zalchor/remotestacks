@@ -8,7 +8,7 @@ services:
       - 5051:5050
     volumes:
       - /disk2/flexget/data:/data
-      - /disk2/flexget/config:/config
+      - /disk2/config/flexget01:/config
       - /disk2/torrents:/torrents
 
     environment:
