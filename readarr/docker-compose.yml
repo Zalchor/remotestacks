@@ -17,7 +17,7 @@ services:
     restart: unless-stopped
   readarr02:
     image: lscr.io/linuxserver/readarr:develop
-    container_name: readarr01
+    container_name: readarr02
     environment:
       - PUID=1000
       - PGID=1000
