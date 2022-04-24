@@ -29,3 +29,34 @@ services:
     ports:
       - 8788:8787
     restart: unless-stopped
+  calibreweb01:
+    image: lscr.io/linuxserver/calibre-web
+    container_name: calibreweb01
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DOCKER_MODS=linuxserver/calibre-web:calibre #optional
+      - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
+    volumes:
+      - /disk2/config/calibreweb01:/config
+      - /disk2/books/library:/books
+    ports:
+      - 8083:8083
+    restart: unless-stopped
+  calibre01:
+    image: lscr.io/linuxserver/calibre
+    container_name: calibre01
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - PASSWORD= #optional
+      - CLI_ARGS= #optional
+    volumes:
+      - /disk2/config/calibre01:/config
+      - /disk2/books/library:/books
+    ports:
+      - 8180:8080
+      - 8181:8081
+    restart: unless-stopped
