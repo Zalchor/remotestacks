@@ -40,7 +40,7 @@ services:
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
     volumes:
       - /disk2/config/calibreweb01:/config
-      - /disk2/books/ebooks:/books
+      - /disk2/books:/books
     ports:
       - 8083:8083
     restart: unless-stopped
@@ -55,7 +55,7 @@ services:
       - CLI_ARGS= #optional
     volumes:
       - /disk2/config/calibre01:/config
-      - /disk2/books/ebooks:/books
+      - /disk2/books:/books
     ports:
       - 8180:8080
       - 8181:8081
