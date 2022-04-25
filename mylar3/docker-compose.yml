@@ -14,3 +14,7 @@ services:
     ports:
       - 8890:8090
     restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared

@@ -10,9 +10,12 @@ services:
       - /disk2/flexget/data:/data
       - /disk2/config/flexget01:/config
       - /disk2/torrents:/torrents
-
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
       - FG_WEBUI_PASSWD=@{PASSWORD}
+networks:
+  default:
+    external:
+      name: shared
