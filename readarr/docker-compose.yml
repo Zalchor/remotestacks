@@ -60,3 +60,7 @@ services:
       - 8180:8080
       - 8181:8081
     restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared
