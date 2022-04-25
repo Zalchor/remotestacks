@@ -1,0 +1,26 @@
+---
+version: "2.1"
+services:
+  swag01:
+    image: ghcr.io/linuxserver/swag
+    container_name: swag01
+    ports:
+      - 80:80
+      - 443:443
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - URL=bitvoid.cloud
+      - SUBDOMAINS=www,remote2
+      - VALIDATION=http
+      - ONLY_SUBDOMAINS=true
+    volumes:
+      - /disk2/config/swag01:/config
+    restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared

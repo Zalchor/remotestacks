@@ -4,7 +4,8 @@ services:
   jackett01:
     image: lscr.io/linuxserver/jackett
     container_name: jackett01
-    network_mode: host
+    ports:
+      - 9117:9117
     environment:
       - PUID=1000
       - PGID=1000
@@ -15,3 +16,7 @@ services:
       - /disk2/config/jackett01:/config
       - /disk2/torrents/:/torrents
     restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared
