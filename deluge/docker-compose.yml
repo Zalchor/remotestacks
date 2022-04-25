@@ -17,6 +17,11 @@ services:
       - 60881:60881
       - 60881:60881/udp
     restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared
+      
   # deluge02:
   #   image: lscr.io/linuxserver/deluge
   #   container_name: deluge02
