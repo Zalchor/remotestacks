@@ -44,7 +44,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - REDIS_PASSWORD = ${REDIS_PASSWORD}
+      - REDIS_PASSWORD= ${REDIS_PASSWORD}
   mariadb:
     container_name: mariadb
     image: linuxserver/mariadb
@@ -53,11 +53,11 @@ services:
     volumes:
       - /config/mariadb:/config
     environment:
-      - MYSQL_ROOT_PASSWORD = ${MYSQL_ROOT_PASSWORD}
-      - MYSQL_ROOT_USER = root
-      - MYSQL_DATABASE = authelia
-      - MYSQL_USER = authelia
-      - MYSQL_PASSWORD = ${MYSQL_PASSWORD}
+      - MYSQL_ROOT_PASSWORD= ${MYSQL_ROOT_PASSWORD}
+      - MYSQL_ROOT_USER= root
+      - MYSQL_DATABASE= authelia
+      - MYSQL_USER= authelia
+      - MYSQL_PASSWORD= ${MYSQL_PASSWORD}
     restart: unless-stopped
 networks:
   default:
