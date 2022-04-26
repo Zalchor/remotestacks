@@ -28,7 +28,7 @@ services:
       - 443:443
     user: "1000:1000"
     environment:
-      - TZ=America/New_York
+      - TZ=Europe/London
     volumes:
       - /disk2/config/authelia:/config
     restart: unless-stopped
