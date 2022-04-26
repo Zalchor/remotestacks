@@ -20,45 +20,6 @@ services:
     volumes:
       - /disk2/config/swag01:/config
     restart: unless-stopped
-  authelia:
-    image: authelia/authelia
-    container_name: authelia
-    expose:
-      - 9091
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-    volumes:
-      - /disk2/config/authelia:/config
-    restart: unless-stopped
-  redis01:
-    image: bitnami/redis
-    container_name: redis01
-    volumes:
-      - /disk2/config/redis:/data
-    expose:
-      - 6379
-    restart: unless-stopped
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/London
-      - REDIS_PASSWORD= ${REDIS_PASSWORD}
-  mariadb:
-    container_name: mariadb
-    image: linuxserver/mariadb
-    expose:
-      - 3306
-    volumes:
-      - /config/mariadb:/config
-    environment:
-      - MYSQL_ROOT_PASSWORD= ${MYSQL_ROOT_PASSWORD}
-      - MYSQL_ROOT_USER= root
-      - MYSQL_DATABASE= authelia
-      - MYSQL_USER= authelia
-      - MYSQL_PASSWORD= ${MYSQL_PASSWORD}
-    restart: unless-stopped
 networks:
   default:
     external:
