@@ -30,6 +30,18 @@ services:
     volumes:
       - /disk2/config/authelia:/config
     restart: unless-stopped
+  redis01:
+    image: redis
+    container_name: redis01
+    volumes:
+      - /disk2/config/redis:/data
+    ports:
+      - 6379:6379
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
 networks:
   default:
     external:
