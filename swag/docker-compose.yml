@@ -23,9 +23,6 @@ services:
   authelia:
     image: ghcr.io/authelia/authelia
     container_name: authelia
-    ports:
-      - 80:80
-      - 443:443
     user: "1000:1000"
     environment:
       - TZ=Europe/London
