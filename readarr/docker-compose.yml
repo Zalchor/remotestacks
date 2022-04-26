@@ -10,8 +10,8 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/readarr01:/config
-      - /disk2/books:/books #optional
-      - /disk2/torrents:/torrents #optional
+      - /disk2/books:/books
+      - /disk2/torrents:/torrents
     ports:
       - 8787:8787
     restart: unless-stopped
@@ -24,8 +24,8 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/readarr02:/config
-      - /disk2/books:/books #optional
-      - /disk2/torrents:/torrents #optional
+      - /disk2/books:/books
+      - /disk2/torrents:/torrents
     ports:
       - 8788:8787
     restart: unless-stopped
@@ -36,8 +36,8 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - DOCKER_MODS=linuxserver/calibre-web:calibre #optional
-      - OAUTHLIB_RELAX_TOKEN_SCOPE=1 #optional
+      - DOCKER_MODS=linuxserver/calibre-web:calibre
+      - OAUTHLIB_RELAX_TOKEN_SCOPE=1
     volumes:
       - /disk2/config/calibreweb01:/config
       - /disk2/books:/books
@@ -51,8 +51,9 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/London
-      - PASSWORD= #optional
-      - CLI_ARGS= #optional
+      - PASSWORD=
+      - CLI_ARGS=
+      - SUBFOLDER=/calibre/
     volumes:
       - /disk2/config/calibre01:/config
       - /disk2/books:/books
