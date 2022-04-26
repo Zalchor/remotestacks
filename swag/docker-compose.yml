@@ -20,6 +20,18 @@ services:
     volumes:
       - /disk2/config/swag01:/config
     restart: unless-stopped
+  authelia:
+    image: ghcr.io/authelia/authelia
+    container_name: authelia
+    ports:
+      - 80:80
+      - 443:443
+    user: "1000:1000"
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - /disk2/config/authelia:/config
+    restart: unless-stopped
 networks:
   default:
     external:
