@@ -10,8 +10,8 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/prowlarr01/data:/config
-    ports:
-      - 9696:9696
+    expose:
+      - 9696
     restart: unless-stopped
 networks:
   default:
