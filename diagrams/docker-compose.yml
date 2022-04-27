@@ -1,13 +1,12 @@
 #This compose file adds diagrams.net (ex draw.io) to your stack
 version: '3.5'
 services:
-  drawio:
+  draw01:
     image: jgraph/drawio
-    container_name: drawio
+    container_name: draw01
     restart: unless-stopped
-    ports:
-      - 8080:8080
-      - 8443:8443
+    expose:
+      - 8080
     environment:
       PUBLIC_DNS: domain
       ORGANISATION_UNIT: unit
@@ -15,12 +14,6 @@ services:
       CITY: city
       STATE: state
       COUNTRY_CODE: country
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://domain:8080 || exit 1"]
-      interval: 1m30s
-      timeout: 10s
-      retries: 5
-      start_period: 10s
 networks:
   default:
     external:
