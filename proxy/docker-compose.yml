@@ -1,0 +1,20 @@
+---
+version: "2.1"
+services:
+  squid01:
+    image: sameersbn/squid
+    container_name: squid01
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /disk2/config/squid01/cache:/var/spool/squid
+      - /disk2/config/squid01/squid:/etc/squid
+    ports:
+      - 5235:3128
+    restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared
