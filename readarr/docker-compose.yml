@@ -10,6 +10,7 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/readarr01:/config
+      - /disk2/config/calibre01:/library
       - /disk2/books:/books
       - /disk2/torrents:/torrents
     expose:
