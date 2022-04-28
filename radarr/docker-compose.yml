@@ -12,8 +12,8 @@ services:
       - /disk2/config/radarr01:/config
       - /disk3/plex/movies:/movies
       - /disk2/torrents:/torrents
-    ports:
-      - 7878:7878
+    expose:
+      - 7878
     restart: unless-stopped
 networks:
   default:

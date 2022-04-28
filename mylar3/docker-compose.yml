@@ -11,8 +11,8 @@ services:
       - /disk2/config/mylar01:/config
       - /disk2/books/comics:/comics
       - /disk2/torrents:/torrents
-    ports:
-      - 8890:8090
+    expose:
+      - 8090
     restart: unless-stopped
 networks:
   default:

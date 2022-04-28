@@ -4,8 +4,8 @@ services:
     image: wiserain/flexget
     container_name: flexget01
     restart: on-failure:5
-    ports :
-      - 5051:5050
+    expose :
+      - 5050
     volumes:
       - /disk2/flexget/data:/data
       - /disk2/config/flexget01:/config

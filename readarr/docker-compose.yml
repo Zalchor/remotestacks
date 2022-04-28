@@ -12,8 +12,8 @@ services:
       - /disk2/config/readarr01:/config
       - /disk2/books:/books
       - /disk2/torrents:/torrents
-    ports:
-      - 8787:8787
+    expose:
+      - 8787
     restart: unless-stopped
   readarr02:
     image: lscr.io/linuxserver/readarr:develop
@@ -26,8 +26,8 @@ services:
       - /disk2/config/readarr02:/config
       - /disk2/books:/books
       - /disk2/torrents:/torrents
-    ports:
-      - 8788:8787
+    expose:
+      - 8787
     restart: unless-stopped
   calibreweb01:
     image: lscr.io/linuxserver/calibre-web
@@ -41,8 +41,8 @@ services:
     volumes:
       - /disk2/config/calibreweb01:/config
       - /disk2/books:/books
-    ports:
-      - 8083:8083
+    expose:
+      - 8083
     restart: unless-stopped
   calibre01:
     image: lscr.io/linuxserver/calibre
@@ -57,9 +57,9 @@ services:
     volumes:
       - /disk2/config/calibre01:/config
       - /disk2/books:/books
-    ports:
-      - 8180:8080
-      - 8181:8081
+    expose:
+      - 8080
+      - 8081
     restart: unless-stopped
 networks:
   default:

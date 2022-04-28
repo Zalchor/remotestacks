@@ -4,8 +4,8 @@ services:
   jackett01:
     image: lscr.io/linuxserver/jackett
     container_name: jackett01
-    ports:
-      - 9117:9117
+    expose:
+      - 9117
     environment:
       - PUID=1000
       - PGID=1000

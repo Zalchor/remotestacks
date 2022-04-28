@@ -3,7 +3,6 @@ services:
   plex01:
     image: lscr.io/linuxserver/plex
     container_name: plex01
-    network_mode: host
     environment:
       - PUID=1000
       - PGID=1000
@@ -16,3 +15,9 @@ services:
       - /disk3/plex/tvarchive:/tvarchive
       - /disk3/plex/movies:/movies
     restart: unless-stopped
+    ports:
+      - 32400:32400
+networks:
+  default:
+    external:
+      name: shared
