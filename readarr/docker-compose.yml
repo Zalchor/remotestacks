@@ -10,7 +10,6 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/readarr01:/config
-      - /disk2/config/calibre01:/library
       - /disk2/books:/books
       - /disk2/torrents:/torrents
     expose:
@@ -41,7 +40,7 @@ services:
       - OAUTHLIB_RELAX_TOKEN_SCOPE=1
     volumes:
       - /disk2/config/calibreweb01:/config
-      - /disk2/books:/books
+      - /disk2/config/readarr01:/books
     expose:
       - 8083
     restart: unless-stopped
@@ -57,7 +56,7 @@ services:
       - SUBFOLDER=/calibre/
     volumes:
       - /disk2/config/calibre01:/config
-      - /disk2/books:/books
+      - /disk2/config/readarr01:/books
     expose:
       - 8080
       - 8081
