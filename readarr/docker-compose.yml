@@ -10,7 +10,8 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/readarr01:/config
-      - /disk2/config/readarr01/books/:/data
+      - /disk2/config/readarr01/books:/data
+      - /disk2/config/readarr01/books:/books
       - /disk2/torrents/process/booksreadarr:/torrents
     expose:
       - 8787
