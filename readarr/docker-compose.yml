@@ -12,7 +12,7 @@ services:
       - /disk2/config/readarr01:/config
       - /disk2/config/readarr01/books:/data
       - /disk2/config/readarr01/books:/books
-      - /disk2/torrents/process/booksreadarr:/torrents
+      - /disk2/torrents/:/torrents
     expose:
       - 8787
     restart: unless-stopped
