@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   squid01:
-    image: sameersbn/squid
+    image: ubuntu/squid:latest
     container_name: squid01
     environment:
       - PUID=1000
