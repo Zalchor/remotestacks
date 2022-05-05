@@ -13,7 +13,7 @@ services:
       - /disk1/plex/transcoder:/transcoder
       - /disk3/plex/tv:/tv
       - /disk3/plex/tvarchive:/tvarchive
-      - /disk3/plex/movies:/movies
+      - /disk2/plex/movies:/movies
     restart: unless-stopped
     ports:
       - 32400:32400

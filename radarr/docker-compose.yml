@@ -10,7 +10,7 @@ services:
       - TZ=Europe/London
     volumes:
       - /disk2/config/radarr01:/config
-      - /disk3/plex/movies:/movies
+      - /disk2/plex/movies:/movies
       - /disk2/torrents:/torrents
     expose:
       - 7878
