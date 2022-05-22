@@ -1,6 +1,6 @@
 version: '2'
 services:
-  kanboard:
+  kanboard01:
     image: kanboard/kanboard:latest
     ports:
       - "8213:80"
