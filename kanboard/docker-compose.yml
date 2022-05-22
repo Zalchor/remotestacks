@@ -1,0 +1,14 @@
+version: '2'
+services:
+  kanboard:
+    image: kanboard/kanboard:latest
+    ports:
+      - "8213:80"
+    volumes:
+      - /disk2/config/kanboard01/data:/var/www/app/data
+      - /disk2/config/kanboard01/plugins:/var/www/app/plugins
+    restart: unless-stopped
+networks:
+  default:
+    external:
+      name: shared
