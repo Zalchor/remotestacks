@@ -2,7 +2,7 @@
 version: '3.5'
 services:
   draw01:
-    image: jgraph/drawio
+    image: jgraph/drawio:latest
     container_name: draw01
     restart: unless-stopped
     expose:

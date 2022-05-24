@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   swag01:
-    image: ghcr.io/linuxserver/swag
+    image: ghcr.io/linuxserver/swag:latest
     container_name: swag01
     ports:
       - 80:80
