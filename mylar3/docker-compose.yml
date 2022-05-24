@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   mylar01:
-    image: lscr.io/linuxserver/mylar3
+    image: lscr.io/linuxserver/mylar3:latest
     container_name: mylar01
     environment:
       - PUID=1000

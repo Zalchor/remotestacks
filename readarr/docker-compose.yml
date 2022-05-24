@@ -31,7 +31,7 @@ services:
       - 8787
     restart: unless-stopped
   calibreweb01:
-    image: lscr.io/linuxserver/calibre-web
+    image: lscr.io/linuxserver/calibre-web:latest
     container_name: calibreweb01
     environment:
       - PUID=1000
@@ -46,7 +46,7 @@ services:
       - 8083
     restart: unless-stopped
   calibre01:
-    image: lscr.io/linuxserver/calibre
+    image: lscr.io/linuxserver/calibre:latest
     container_name: calibre01
     environment:
       - PUID=1000

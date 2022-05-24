@@ -2,7 +2,7 @@
 version: "2.1"
 services:
   jackett01:
-    image: lscr.io/linuxserver/jackett
+    image: lscr.io/linuxserver/jackett:latest
     container_name: jackett01
     expose:
       - 9117
