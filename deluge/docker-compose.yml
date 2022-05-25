@@ -12,6 +12,7 @@ services:
     volumes:
       - /disk2/config/deluge01:/config
       - /disk2/torrents:/torrents
+      - /disk1/torrents:/torrents2
     ports:
       - 8101:8112
       - 60881:60881
